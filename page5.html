@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>To-Do List</title>
+</head>
+<body>
+
+    <h2>To-Do List</h2>
+
+    <input type="text" id="task" placeholder="Enter task">
+
+    <button onclick="addTask()">Add Task</button>
+
+    <button onclick="clearTasks()">Clear All</button>
+
+    <p id="result"></p>
+
+    <script>
+
+        var tasks = [];
+
+        function addTask() {
+
+            var task = document.getElementById("task").value;
+
+            if (task != "") {
+                tasks.push(task);
+                document.getElementById("task").value = "";
+                displayTasks();
+            }
+
+        }
+
+        function removeTask(index) {
+
+            tasks.splice(index, 1);
+            displayTasks();
+
+        }
+
+        function displayTasks() {
+
+            var output = "";
+
+            for (var i = 0; i < tasks.length; i++) {
+
+                output = output + (i + 1) + ": " + tasks[i];
+
+                output = output + 
+                    " <button onclick='removeTask(" + i + ")'>Remove</button><br>";
+
+            }
+
+            document.getElementById("result").innerHTML = output;
+
+        }
+
+        function clearTasks() {
+
+            tasks = [];
+            displayTasks();
+
+        }
+
+    </script>
+
+</body>
+</html>

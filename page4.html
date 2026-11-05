@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reference Data Types</title>
+</head>
+<body>
+
+    <h2>Example 21: Objects</h2>
+    <p id="out21"></p>
+
+    <h2>Example 22: Arrays</h2>
+    <p id="out22"></p>
+
+    <h2>Example 23: Function Syntax</h2>
+    <p id="out23"></p>
+
+    <h2>Example 24: Function with Parameter</h2>
+    <p id="out24"></p>
+
+    <h2>Example 25: Function as an Object</h2>
+    <p id="out25"></p>
+
+    <script>
+
+        // Example 21
+        var person = {
+            name: "John",
+            age: 30
+        };
+
+        document.getElementById("out21").innerHTML =
+            person.name + "<br>" + person.age;
+
+        // Example 22
+        var numbers = [1, 2, 3, 4];
+
+        document.getElementById("out22").innerHTML =
+            numbers[0] + "<br>" + numbers[1];
+
+        // Example 23
+        function functionName() {
+            return "Function executed";
+        }
+
+        document.getElementById("out23").innerHTML = functionName();
+
+        // Example 24
+        function greet(name) {
+            return "Hello, " + name;
+        }
+
+        document.getElementById("out24").innerHTML = greet("John");
+
+        // Example 25
+        function sayHello() {
+            return "Hello World";
+        }
+
+        var say = sayHello;
+
+        document.getElementById("out25").innerHTML = say();
+
+    </script>
+
+</body>
+</html>

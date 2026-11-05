@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Variable Rules</title>
+</head>
+<body>
+
+    <h2>Example 9: Variable Names</h2>
+    <p id="out9"></p>
+
+    <h2>Example 10: Reserved Keywords</h2>
+    <p id="out10"></p>
+
+    <h2>Example 11: Initialization</h2>
+    <p id="out11"></p>
+
+    <h2>Example 12: Unique Names</h2>
+    <p id="out12"></p>
+
+    <h2>Example 13: Scope</h2>
+    <p id="out13"></p>
+
+    <script>
+
+        // Example 9
+        var myVar = "Valid";
+        var _name = "John";
+        var $price = 100;
+
+        document.getElementById("out9").innerHTML =
+            myVar + "<br>" + _name + "<br>" + $price;
+
+        // Example 10
+        document.getElementById("out10").innerHTML =
+            "Reserved keywords cannot be used as variable names.";
+
+        // Example 11
+        var age;
+        const pi = 3.14;
+
+        document.getElementById("out11").innerHTML =
+            "Age: " + age + "<br>Pi: " + pi;
+
+        // Example 12
+        var count = 5;
+        var count = 10;
+
+        document.getElementById("out12").innerHTML = count;
+
+        // Example 13
+        function test() {
+
+            if (true) {
+                let a = 10;
+                var b = 20;
+            }
+
+            return b;
+
+        }
+
+        document.getElementById("out13").innerHTML = test();
+
+    </script>
+
+</body>
+</html>

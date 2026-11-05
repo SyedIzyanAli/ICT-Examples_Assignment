@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Primitive Data Types</title>
+</head>
+<body>
+
+    <h2>Example 14: String</h2>
+    <p id="out14"></p>
+
+    <h2>Example 15: Number</h2>
+    <p id="out15"></p>
+
+    <h2>Example 16: BigInt</h2>
+    <p id="out16"></p>
+
+    <h2>Example 17: Boolean</h2>
+    <p id="out17"></p>
+
+    <h2>Example 18: Undefined</h2>
+    <p id="out18"></p>
+
+    <h2>Example 19: Null</h2>
+    <p id="out19"></p>
+
+    <h2>Example 20: Symbol</h2>
+    <p id="out20"></p>
+
+    <script>
+
+        // Example 14
+        var name = "John";
+        document.getElementById("out14").innerHTML = name;
+
+        // Example 15
+        var age = 30;
+        var price = 9.99;
+
+        document.getElementById("out15").innerHTML =
+            age + "<br>" + price;
+
+        // Example 16
+        var bigNumber = 9007199254740991n;
+
+        document.getElementById("out16").innerHTML = bigNumber.toString();
+
+        // Example 17
+        var isAvailable = true;
+        var isLoggedIn = false;
+
+        document.getElementById("out17").innerHTML =
+            isAvailable + "<br>" + isLoggedIn;
+
+        // Example 18
+        var x;
+
+        document.getElementById("out18").innerHTML = x;
+
+        // Example 19
+        var y = null;
+
+        document.getElementById("out19").innerHTML = String(y);
+
+        // Example 20
+        var id = Symbol("id");
+
+        document.getElementById("out20").innerHTML = id.toString();
+
+    </script>
+
+</body>
+</html>
